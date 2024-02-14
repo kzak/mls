@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "mls"
+version = "0.1.0"
+description = ""
+authors = ["zak"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.26.4"
+matplotlib = "^3.8.2"
+plotly = "^5.18.0"
+scikit-learn = "^1.4.0"
+scipy = "^1.12.0"
+jupyterlab = "^4.1.1"
+black = "^24.2.0"
+isort = "^5.13.2"
+jupyterlab-code-formatter = "^2.2.1"
+tinygp = "^0.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
