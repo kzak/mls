@@ -50,4 +50,5 @@ def loglik(w, X, y):
 def grad(w, X, y, lmd):
     f = sigmoid(X @ w)
     grad_w = ((y - f) * X).sum(axis=0).reshape(-1, 1)
+    grad_w = grad_w - lmd * w
     return grad_w
