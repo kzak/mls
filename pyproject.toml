@@ -13,7 +13,7 @@ plotly = "^5.18.0"
 scikit-learn = "^1.4.0"
 scipy = "^1.12.0"
 jupyterlab = "^4.1.1"
-black = "^24.2.0"
+black = {extras = ["jupyter"], version = "^24.3.0"}
 isort = "^5.13.2"
 jupyterlab-code-formatter = "^2.2.1"
 tinygp = "^0.3.0"
@@ -22,3 +22,14 @@ tinygp = "^0.3.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ['py39']
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip_gitignore = true
+multi_line_output = 3
+include_trailing_comma = true
