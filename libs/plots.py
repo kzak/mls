@@ -59,9 +59,7 @@ def plotly_true_and_prediction_surface(true_fn, prediction_fn, X, y, **kwargs):
     # Build visualizing objects
     # ------------------------------
     true_surface = plotly_build_surface(true_fn, r=r, colorscale="Reds", opacity=0.2)
-    prediction_surface = plotly_build_surface(
-        prediction_fn, r=r, colorscale="Blues", opacity=0.5
-    )
+    prediction_surface = plotly_build_surface(prediction_fn, r=r, colorscale="Blues", opacity=0.5)
     scatter_3d = plotly_build_scatter3d(X, y, color="red")
 
     fig = go.Figure(data=[prediction_surface, true_surface, scatter_3d])
@@ -72,9 +70,7 @@ def plotly_true_and_prediction_surface(true_fn, prediction_fn, X, y, **kwargs):
     fig.update_layout(
         autosize=False,
         margin=dict(l=0, r=0, t=10, b=10),
-        scene=dict(
-            xaxis=dict(title="x1"), yaxis=dict(title="x2"), zaxis=dict(title="y")
-        ),
+        scene=dict(xaxis=dict(title="x1"), yaxis=dict(title="x2"), zaxis=dict(title="y")),
         showlegend=False,
     )
 
