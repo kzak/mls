@@ -1,5 +1,16 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import plotly.graph_objects as go
+
+
+# ------------------------------
+# matplotlib functions
+# ------------------------------
+def plt_scatter(X, **kwargs):
+    s = kwargs.pop("s", 5)
+    alpha = kwargs.pop("alpha", 0.5)
+
+    plt.scatter(X[:, 0], X[:, 1], s=s, alpha=alpha, **kwargs)
 
 
 # ------------------------------

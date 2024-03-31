@@ -17,6 +17,10 @@ black = {extras = ["jupyter"], version = "^24.3.0"}
 isort = "^5.13.2"
 jupyterlab-code-formatter = "^2.2.1"
 tinygp = "^0.3.0"
+jax = {extras = ["cpu"], version = "^0.4.25"}
+tqdm = "^4.66.2"
+optax = "^0.2.2"
+flax = "^0.8.2"
 
 
 [build-system]
